@@ -51,12 +51,16 @@ class PostsController extends Controller
     public function store(StorePost $request)
     {
         $validated = $request->validated();
+        $post = BlogPost::create($validated);
+        /*
         $post = new BlogPost();
         //$post->title = $request->input('title');
         $post->title = $validated['title'];
         //$post->content = $request->input('content');
         $post->content = $validated['content'];
         $post->save();
+        */
+
 
         $request->session()->flash('status', 'Post was created!');
 
