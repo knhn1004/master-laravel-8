@@ -11,7 +11,9 @@
 <body>
     <div class="p-3 px-md-4 bg-white border-bottom shadow-sm mb-3">
         <div class="container d-flex flex-column flex-md-row algin-items-center ">
-            <p class="h5 my-0 mr-md-auto font-weight-normal">Laravel App</p>
+            <p class="h5 my-0 mr-md-auto font-weight-normal">
+                <a class="text-dark" href="{{ route('home.index' )}}">Laravel App</a>
+            </p>
             <nav class="my-2 my-md-0 mr-md-3">
                 <a class="p-2 text-dark" href="{{ route('home.index') }}">Home</a>
                 <a class="p-2 text-dark"href="{{ route('home.contact') }}">Contact</a>

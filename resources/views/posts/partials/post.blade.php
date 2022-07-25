@@ -1,5 +1,5 @@
 
-<h2>
+<h2 class="h3">
     <a href="{{ route('posts.show', ['post' => $post->id]) }}">
         {{ $post-> title }}
     </a>
