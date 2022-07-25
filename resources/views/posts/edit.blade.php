@@ -1,10 +1,12 @@
+
 @extends('layouts.app')
 
-@section('title', 'Create Post')
+@section('title', 'Edit Post')
 
 @section('content')
-<form action="{{ route('posts.store' )}}" method="POST">
+<form action="{{ route('posts.update', ['post' => $post->id]) }}" method="POST">
     @csrf
+    @method('PUT')
     @include('posts.partials.form')
     <div><input type="submit" value="Create"></div>
 </form>
