@@ -9,7 +9,18 @@
     <title>Laravel App - @yield('title')</title>
 </head>
 <body>
-    <div>
+    <div class="p-3 px-md-4 bg-white border-bottom shadow-sm mb-3">
+        <div class="container d-flex flex-column flex-md-row algin-items-center ">
+            <p class="h5 my-0 mr-md-auto font-weight-normal">Laravel App</p>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="{{ route('home.index') }}">Home</a>
+                <a class="p-2 text-dark"href="{{ route('home.contact') }}">Contact</a>
+                <a class="p-2 text-dark"href="{{ route('posts.index') }}">Blog Posts</a>
+                <a class="p-2 text-dark"href="{{ route('posts.create') }}">Add</a>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
         @if(session('status'))
             <div style="background: red; color: white;">
                 {{ session('status') }}
